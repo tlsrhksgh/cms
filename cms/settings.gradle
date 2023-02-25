@@ -2,4 +2,5 @@ rootProject.name = 'zerobase-cms'
 include 'user-api:User'
 findProject(':user-api:User')?.name = 'User'
 include 'user-api'
+include 'domain'
 
