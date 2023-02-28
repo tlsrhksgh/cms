@@ -11,7 +11,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zerobase.cms.user.application.SignUpApplication;
 import com.zerobase.cms.user.domain.SignUpForm;
-import com.zerobase.cms.user.service.SignUpCustomerService;
+import com.zerobase.cms.user.service.customer.SignUpCustomerService;
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

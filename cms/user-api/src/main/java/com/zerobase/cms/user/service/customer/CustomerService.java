@@ -1,4 +1,4 @@
-package com.zerobase.cms.user.service;
+package com.zerobase.cms.user.service.customer;
 
 import static com.zerobase.cms.user.exception.ErrorCode.LOGIN_CHECK_FAIL;
 import static com.zerobase.cms.user.exception.ErrorCode.USER_NOT_FOUND;
