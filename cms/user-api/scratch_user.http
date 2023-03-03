@@ -1,0 +1,65 @@
+### 회원가입 ( 고객 )
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "1992-03-03",
+  "email": "sin99145@naver.com",
+  "name": "string",
+  "password": "string",
+  "phone": "01000000000"
+}
+### 이메일 인증 ( 고객 )
+GET http://localhost:8081/signup/customer/verify?email=sin99145@naver.com&code=NpR4suTmpi
+
+### 로그인 ( 고객 )
+POST http://localhost:8081/signin/customer
+Content-Type: application/json
+
+{
+  "email": "sin99145@naver.com",
+  "password": "string"
+}
+
+### 회원 정보 조회 ( 고객 )
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZlVYR3BaSHp5SUI4VzF5RnRSUXJ4OEdlU2RFQnVMSHJuWVZmTDVYMFZvPSIsImp0aSI6ImJYdmFRWUR2T2tqekNpdk16dVhDZ3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2Nzc4NDczNjYsImV4cCI6MTY3NzkzMzc2Nn0.kOhXr_QTULsIyHlaxoGBm6sjVI0GmbCBKi3V9vlB_EkT4iJwQ2D4LkUGPwJxXJNsW9yqZZhvKHjroA1YO0ZNlw
+
+
+### 잔액 변경 ( 고객 )
+POST http://localhost:8081/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZlVYR3BaSHp5SUI4VzF5RnRSUXJ4OEdlU2RFQnVMSHJuWVZmTDVYMFZvPSIsImp0aSI6ImJYdmFRWUR2T2tqekNpdk16dVhDZ3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2Nzc4NDczNjYsImV4cCI6MTY3NzkzMzc2Nn0.kOhXr_QTULsIyHlaxoGBm6sjVI0GmbCBKi3V9vlB_EkT4iJwQ2D4LkUGPwJxXJNsW9yqZZhvKHjroA1YO0ZNlw
+
+{
+  "from": "admin",
+  "message": "돈 충전",
+  "money": 50000
+}
+
+###########################
+
+### 회원가입 ( 셀러 )
+POST http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "1992-03-03",
+  "email": "sin99145@naver.com",
+  "name": "test",
+  "password": "string",
+  "phone": "01000000000"
+}
+
+### 이메일 인증 ( 셀러 )
+GET http://localhost:8081/signup/seller/verify?email=sin99145@naver.com&code=QeafZilowy
+
+### 로그인 ( 셀러 )
+POST http://localhost:8081/signin/seller
+Content-Type: application/json
+
+{
+  "email": "sin99145@naver.com",
+  "password": "string"
+}
