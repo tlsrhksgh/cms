@@ -1,0 +1,54 @@
+###########################
+
+### 회원가입 ( 셀러 )
+POST http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "1992-03-03",
+  "email": "sin99145@naver.com",
+  "name": "test",
+  "password": "string",
+  "phone": "01000000000"
+}
+
+### 이메일 인증 ( 셀러 )
+GET http://localhost:8081/signup/seller/verify?email=sin99145@naver.com&code=D8EZj4511E
+
+### 로그인 ( 셀러 )
+POST http://localhost:8081/signin/seller
+Content-Type: application/json
+
+{
+  "email": "sin99145@naver.com",
+  "password": "string"
+}
+
+### 상품 추가
+POST http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZlVYR3BaSHp5SUI4VzF5RnRSUXJ4OEdlU2RFQnVMSHJuWVZmTDVYMFZvPSIsImp0aSI6ImJYdmFRWUR2T2tqekNpdk16dVhDZ3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc4MDAyNjcyLCJleHAiOjE2NzgwODkwNzJ9.b5y01nDhWqGw489jgxtwh_E11Y1TUpCBGQIrcvD0IgPTsc8noHHPKOiTN30cC1c1cvpaRNSKLhqX2B8uWHlQGg
+
+{
+  "description": "상품 설명",
+  "items": [
+    {
+      "count": 1,
+      "name": "nike",
+      "price": 100000
+    }
+  ],
+  "name": "나이키 에어포스"
+}
+
+### 상품 아이템 추가
+POST http://localhost:8082/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZlVYR3BaSHp5SUI4VzF5RnRSUXJ4OEdlU2RFQnVMSHJuWVZmTDVYMFZvPSIsImp0aSI6ImJYdmFRWUR2T2tqekNpdk16dVhDZ3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc4MDAyNjcyLCJleHAiOjE2NzgwODkwNzJ9.b5y01nDhWqGw489jgxtwh_E11Y1TUpCBGQIrcvD0IgPTsc8noHHPKOiTN30cC1c1cvpaRNSKLhqX2B8uWHlQGg
+
+{
+      "productId": 1,
+      "count": 1,
+      "name": "nike1",
+      "price": 100000
+}
