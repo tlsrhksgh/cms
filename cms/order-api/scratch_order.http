@@ -52,3 +52,34 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZlVYR3BaSHp5SUI4VzF5RnRSUXJ4OEdlU
       "name": "nike1",
       "price": 100000
 }
+
+### 상품 수정
+PUT http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZlVYR3BaSHp5SUI4VzF5RnRSUXJ4OEdlU2RFQnVMSHJuWVZmTDVYMFZvPSIsImp0aSI6ImJYdmFRWUR2T2tqekNpdk16dVhDZ3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc4MDAyNjcyLCJleHAiOjE2NzgwODkwNzJ9.b5y01nDhWqGw489jgxtwh_E11Y1TUpCBGQIrcvD0IgPTsc8noHHPKOiTN30cC1c1cvpaRNSKLhqX2B8uWHlQGg
+
+{
+  "description": "상품 설명",
+  "items": [
+    {
+      "id": 1,
+      "count": 1,
+      "name": "280",
+      "price": 100000
+    }
+  ],
+  "id": 1,
+  "name": "나이키 에어포스 한정판"
+}
+
+### 상품 아이템 수정
+PUT http://localhost:8082/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZlVYR3BaSHp5SUI4VzF5RnRSUXJ4OEdlU2RFQnVMSHJuWVZmTDVYMFZvPSIsImp0aSI6ImJYdmFRWUR2T2tqekNpdk16dVhDZ3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjc4MDAyNjcyLCJleHAiOjE2NzgwODkwNzJ9.b5y01nDhWqGw489jgxtwh_E11Y1TUpCBGQIrcvD0IgPTsc8noHHPKOiTN30cC1c1cvpaRNSKLhqX2B8uWHlQGg
+
+{
+  "id": 2,
+  "count": 3,
+  "name": "290",
+  "price": 100000
+}
